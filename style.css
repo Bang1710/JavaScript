@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+#demo {
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(243, 35, 46);
+}
+
+button {
+    padding: 10px 20px;
+    background-color: rgb(208, 255, 0);
+    color: red;
+    font-size: 2rem;
+    border: none;
+}
