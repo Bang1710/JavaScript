@@ -7,10 +7,10 @@
 // Hàm  confirm
 // ham set timeout
 // ham set interval
-console.log('day la console.log');
-function myFunction() {
-  let person = prompt("Please enter your name", "Harry Potter");
-  if (person != null) {
-    document.getElementById("demo").innerHTML = "Hello " + person + "! How are you today?";
-  }
-}
+// console.log('day la console.log');
+// function myFunction() {
+//   let person = prompt("Please enter your name", "Harry Potter");
+//   if (person != null) {
+//     document.getElementById("demo").innerHTML = "Hello " + person + "! How are you today?";
+//   }
+// }
