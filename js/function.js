@@ -1,7 +1,7 @@
 // Website: https://javascript.info/function-basics
 
 function stringInString(needle, haystack) {
-    if (typeof (needle, haystack) === 'string') {
+    if (typeof(needle, haystack) === 'string') {
         return haystack.includes(needle)
     } else {
         return false
@@ -58,7 +58,7 @@ function showPrimes(n) {
         if (isPrime(i) == false) {
             continue;
         }
-        alert(i);  // a prime
+        alert(i); // a prime
     }
 }
 
@@ -112,7 +112,7 @@ function checkAge(age) {
 
 // checkAge(17);
 
-function min(a, b)  {
+function min(a, b) {
     if (a > b) {
         return alert(b)
     } else {
@@ -122,7 +122,7 @@ function min(a, b)  {
 
 function min(a, b) {
     let result = a < b ? a : b;
-    return alert(result) ;
+    return alert(result);
 }
 
 // min(4, -6)
@@ -150,10 +150,10 @@ function min(a, b) {
 // let x = prompt(' Hãy nhập giá trị của x', "");
 // let n = prompt('Hãy nhập giá trị của n', "");
 
-function pow(x, n)  {
+function pow(x, n) {
     let S = x;
     if (n > 1) {
-        for(let i = 2; i <= n; i++)  {
+        for (let i = 2; i <= n; i++) {
             S *= x;
         }
         return alert(`Lũy thừa bậc ${n} của ${x}: ${S}`);
@@ -163,4 +163,26 @@ function pow(x, n)  {
 }
 
 
-// pow(x, n);
+pow(x, n);
+
+let number = 20;
+nextPrime:
+    for (let i = 2; i <= number; i++) {
+        for (let j = 2; j < Math.sqrt(i); j++) {
+            if (i % j == 0) {
+                continue nextPrime;
+            }
+        }
+        console.log(`Số nguyên tố là ${i}`);
+    }
+
+// let num;
+// do {
+//     num = prompt('Hãy nhập số lớn hơn 100', 0)
+// } while (num <= 100 || num == null);
+
+for (let i = 0; i <= 20; i++) {
+    if (i % 2 == 0) {
+        console.log(i);
+    }
+}
