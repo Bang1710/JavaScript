@@ -21,3 +21,9 @@ button {
     font-size: 2rem;
     border: none;
 }
+
+h1 {
+    text-align: center;
+    font-size: 4rem;
+    padding: 20px;
+}
