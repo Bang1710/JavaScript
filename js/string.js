@@ -37,11 +37,11 @@ console.log(text5); //hello my name
 
 // Chuỗi dưới dạng đối tượng 
 let y = 'Hello';
-console.log(typeof(y)); // string
+console.log(typeof (y)); // string
 let x = new String('Hello');
 let z = new String('Hello');
-console.log(x); 
-console.log(typeof(x)); //object
+console.log(x);
+console.log(typeof (x)); //object
 
 console.log(x == y); //true
 console.log(x === y); //false
@@ -85,7 +85,7 @@ Sự khác biệt là tham số thứ hai chỉ định độ dài của phần 
 */
 console.log(address.substr(7, 9))
 console.log(address.substr(6))
-console.log(address.substr(-3,2))
+console.log(address.substr(-3, 2))
 
 /* String replace method
 Phương replace() thức thay thế một giá trị được chỉ định bằng một giá trị khác trong một chuỗi:
@@ -162,7 +162,7 @@ console.log(fullName.lastIndexOf('n'));
 console.log(fullName.indexOf('i'));
 console.log(fullName.lastIndexOf('i'));
 // Cả hai phương thức đều chấp nhận tham số thứ hai làm vị trí bắt đầu cho tìm kiếm
-console.log(fullName.indexOf('n',6)); // tìm từ trái sang phải
+console.log(fullName.indexOf('n', 6)); // tìm từ trái sang phải
 console.log(fullName.lastIndexOf('n', 4)); // tìm từ phải sang trái
 
 // Phương thức search() tìm kiếm một chuỗi cho một giá trị được chỉ định và trả về vị trí của kết quả khớp
@@ -199,6 +199,79 @@ console.log(fullName.startsWith('n', 5));
 console.log(fullName.endsWith('g'));
 // Kiểm tra 3 ký tự đầu tiên của một chuỗi kết thúc bằng "u"
 console.log(fullName.endsWith('u', 3));
+
+// --------------------------Bài tập -----------------------
+
+// Viết một hàm ucFirst(str) trả về chuỗi str có ký tự đầu tiên viết hoa
+
+function ucFirst(str) {
+        // let strAfter = '';
+        // for (let i = 0; i < str.length; i++) {
+        //         if (i == 0) {
+        //                 strAfter += str[i].toLocaleUpperCase();
+        //         } else {
+        //                 strAfter += str[i];
+        //         }
+        // }
+        // return strAfter;
+        // if (str == '') return str;
+        // return str[0].toLocaleUpperCase() + str.slice(1);
+        if (!str) return str;
+        return str[0].toUpperCase() + str.slice(1);
+
+}
+
+console.log(ucFirst('hello'));
+console.log(ucFirst(''));
+
+
+// Viết một hàm checkSpam(str)trả về true nếu str có chứa 'viagra' hoặc 'XXX', nếu không false.
+
+function checkSpam(str) {
+        // if (str.search(/viagra/i) != -1 || str.search(/XXX/i) != -1) {
+        //         return true;
+        // } 
+        // return false;
+        let lowerStr = str.toLowerCase();
+
+        return lowerStr.includes('viagra') || lowerStr.includes('xxx');
+}
+
+console.log(checkSpam('buy ViAgRA now'));
+console.log(checkSpam('free xxxxx'));
+console.log(checkSpam("innocent rabbit"));
+
+// Tạo một hàm truncate(str, maxlength )kiểm tra độ dài của dấu str và,
+// nếu nó vượt quá maxlength- thay thế phần cuối của str bằng ký tự dấu chấm lửng"…" , 
+// để làm cho độ dài của nó bằng maxlength.
+// Kết quả của hàm phải là chuỗi bị cắt ngắn (nếu cần).
+
+function truncate(str, maxlength) {
+        if (str.length > maxlength) {
+                return str.slice(0, maxlength - 1) + '...';
+        } else {
+                return str;
+        }
+        // return str.length > maxlength ? str.slice(0, maxlength - 1) + '...' : str;
+}
+
+console.log(truncate("What I'd like to tell on this topic is:", 20));
+console.log(truncate("Hi everyone!", 20));
+
+// Chúng tôi có một chi phí ở dạng "$120" . Đó là: ký hiệu đô la đi trước, sau đó đến số.
+// Tạo một chức năng extractCurrencyValue(str) sẽ trích xuất giá trị số từ chuỗi đó và trả về.
+
+function extractCurrencyValue(str) {
+        if (str) {
+                return  +str.slice(1);
+        }
+        return 0;
+        // return +str.slice(1);
+}
+
+console.log(extractCurrencyValue('$120'));
+console.log(extractCurrencyValue(null));
+
 
 
 
