@@ -95,19 +95,19 @@ Giá trị đặc biệt undefined cũng đứng ngoài. Nó tạo ra một lo�
 
 Ý nghĩa của undefined là "giá trị không được chỉ định".
 
-Nếu một biến được khai báo, nhưng không được gán, thì giá trị của nó là undefined:
+Nếu một biến được khai báo, nhưng không được gán, thì giá trị của nó là undefined: */
 
 let age;
 
 alert(age); // shows "undefined"
-Về mặt kỹ thuật, có thể gán rõ ràng undefinedcho một biến:
+// Về mặt kỹ thuật, có thể gán rõ ràng undefined cho một biến:
 
 let age = 100;
 
 // change the value to undefined
 age = undefined;
-
 alert(age); // "undefined"
+/*
 Nhưng chúng tôi không khuyên bạn nên làm điều đó.
 Thông thường, người ta sử dụng null để gán giá trị "trống" hoặc "không xác định" cho một biến, 
 trong khi undefinedđược dành riêng làm giá trị ban đầu mặc định cho những thứ chưa được gán.
@@ -119,6 +119,7 @@ Toán tử typeoftrả về kiểu của đối số.
 Nó hữu ích khi chúng ta muốn xử lý các giá trị thuộc các loại khác nhau hoặc chỉ muốn kiểm tra nhanh.
 
 Lệnh gọi typeof xtrả về một chuỗi có tên kiểu:
+*/
 
 typeof undefined // "undefined"
 
@@ -137,7 +138,6 @@ typeof Math // "object"  (1)
 typeof null // "object"  (2)
 
 typeof alert // "function"  (3)
-*/
 
 /* Bài Tập
 Đầu ra của script là gì?

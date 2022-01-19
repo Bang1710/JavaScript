@@ -1,3 +1,29 @@
+/*  Array Method
+- To string
+- Join
+- Pop
+- Push
+- Shift
+- Unshift
+- Splicing
+- Concat
+- slicing
+
+*/
+
+let languges = [
+    'Javascript',
+    'HTML',
+    'CSS',
+    'Ruby',
+    'Dart'
+]
+
+
+// console.log(languges.toString)
+
+
+
 // Cho trước hàm getRequestBodyFromValues và tham số formValues, các test case sẽ gọi hàm này và truyền đối số có định dạng tương tự như sau:
 
 // [

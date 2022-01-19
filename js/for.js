@@ -62,10 +62,10 @@ for (let value of Object.keys(myObject)) {
 
 // While
 let i = 0;
-// while (i <= 5) {
-//     console.log(i)
-//     i++;
-// }
+while (i <= 5) {
+    console.log(i)
+    i++;
+}
 
 // Nested loop
 
@@ -100,12 +100,12 @@ console.log(factorial(5))
 // Đã cho hàm run và tham số x, y
 // run(1, 5)
 
-// function run(x, y) {
-//     if (x < y - 2) {
-//         return `${x + 1} ${run(x + 1, y)}`
-//     }
-//     return `${y - 1}`
-// }
+function run(x, y) {
+    if (x < y - 2) {
+        return `${x + 1} ${run(x + 1, y)}`
+    }
+    return `${y - 1}`
+}
 
 function run(x, y) {
     if (x < y - 2) {

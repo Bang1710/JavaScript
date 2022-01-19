@@ -145,16 +145,17 @@ Có một cú pháp khác để tạo một hàm được gọi là Expression f
 Nó cho phép tạo một hàm mới ở giữa bất kỳ biểu thức nào.
 
 Ví dụ:
+*/
 
 let sayHi = function() {
   alert( "Hello" );
 };
-*/
 
 /* Ở đây chúng ta có thể thấy một biến sayHi nhận giá trị, 
 hàm mới, được tạo dưới dạng function() { alert("Hello"); }.
 Xin lưu ý, không có tên sau function từ khóa. Cho phép bỏ qua tên đối với Expression function.
 
+*/
 function sayHi() {
   alert( "Hello" );
 }
@@ -170,4 +171,3 @@ let func = sayHi;    // (2) copy
 
 func(); // Hello     // (3) run the copy (it works)!
 sayHi(); // Hello    //     this still works too (why wouldn't it)
-*/
