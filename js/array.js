@@ -1,23 +1,163 @@
 /*  Array Method
 - To string
 - Join
-- Pop
-- Push
-- Shift
-- Unshift
+- pop / push, shift / unshift
 - Splicing
 - Concat
 - slicing
 
 */
 
+// ------------------------CÁC CÁCH KHAI BÁO MỘT MẢNG ----------------------
+
+let arr = new Array();
+// let arr = []
+
+let fruits = ["Apple", "Orange", "Plum"];
+console.log(fruits)
+
+// -------------------- MẢNG CÓ THỂ LƯU TRỮ BẤT KÌ LOẠI DỮ LIỆU NÀO --------------------------
+
+let arr1 = [
+    'Apple',
+    {
+        name: 'John'
+    },
+    true,
+    function () {
+        alert('hello');
+    }
+];
+
+for (let value of arr1) {
+    console.log(value)
+}
+
+// ---------------------------------------METHOD----------------------------
+// ------------------------------------POP-------------------------------
+// Trích xuất phần tử cuối cùng của mảng và trả về
+
 let languges = [
     'Javascript',
-    'HTML',
-    'CSS',
     'Ruby',
-    'Dart'
+    'Dart',
+    'HTML'
 ]
+
+console.log(languges)
+console.log('Phần tử mà phương thức pop() lấy ra: ', languges.pop());
+console.log(`Mảng sau khi thực hiện phương thức pop(): ${languges}`)
+
+// -----------------------------------PUSH-----------------------------
+// Nối phần tử vào cuối mảng
+
+console.log(languges.push('CSS')); // ==> trả về độ dài của mảng
+console.log(languges)
+
+// --------------------------------SHIFT-----------------------------
+// Trích xuất phần tử đầu tiên của mảng và trả về nó:
+
+console.log(languges.shift());
+console.log(languges)
+
+
+// ------------------------------UNSHIFT-----------------------
+// Thêm phần tử vào đầu mảng
+
+console.log(languges.unshift('PHP & MySQL')) // ==> return length array
+console.log(languges)
+
+// Các phương thức pushvà unshift có thể thêm nhiều phần tử cùng một lúc
+// ----------------------------------Đối với mảng thì ta có thể dùng vòng lặp For/ For - in/ For - of
+
+// Đoạn mã này sẽ hiển thị gì?
+
+let fruit = ["Apples", "Pear", "Orange"];
+
+// push a new value into the "copy"
+let shoppingCart = fruit;
+shoppingCart.push("Banana");
+
+// what's in fruits?
+console.log(fruit); // array is four items
+
+// Bài tập 2
+
+let styles = [
+    'Jazz',
+    'Blues'
+]
+
+styles.push('Rock-n-Roll');
+
+styles[Math.floor(styles.length - 1) / 2] = "Classics"
+
+console.log(styles.shift());
+
+styles.unshift('Rap', 'Range');
+
+console.log(styles)
+
+// Kết quả là gì? Tại sao?
+
+let arr2 = ["a", "b"];
+
+arr2.push(function () {
+    console.log(this);
+})
+
+console.log(arr2[2]()); // a,b, function () {....}
+
+function sumInput() {
+    let sum = 0;
+    let numbers = [];
+
+    while (true) {
+
+        let value = prompt("A number please?", 0);
+
+        // should we cancel?
+        if (value === "" || value === null || !isFinite(value)) break;
+
+        numbers.push(+value);
+    }
+
+    for (let key of numbers) {
+        sum += key;
+    }
+
+    return sum;
+}
+
+// console.log(sumInput())
+
+// Bài 3
+function getMaxSubSum(arr) {
+    let arrLength = arr.length;
+    let sumSS = 0;
+    for (let i = 0; i < arrLength; i++) {
+        let sum = arr[i];
+        for (let j = i + 1; j < arrLength; j++) {
+            if (sum > sumSS) {
+                sumSS = sum;
+            }
+            sum += arr[j]
+        }
+    }
+    return sumSS;
+}
+
+console.log(getMaxSubSum([-1, 2, 3, -9]))
+console.log(getMaxSubSum([2, -1, 2, 3, -9]))
+console.log(getMaxSubSum([-1, 2, 3, -9, 11]))
+console.log(getMaxSubSum([100, -9, 2, -3, 5]))
+console.log(getMaxSubSum([-1, -2, -3]))
+
+// -1,2,3,-9
+
+
+
+
 
 
 // console.log(languges.toString)
@@ -149,9 +289,9 @@ function findStringsInArrayByKeyword(keyword, strings) {
     let result = []
     for (let i = 0; i < strings.length; i++) {
         if (strings[i].indexOf(keyword) !== -1) {
-            
+
             result.push(strings[i])
-        } 
+        }
     }
     return result;
 
@@ -159,7 +299,7 @@ function findStringsInArrayByKeyword(keyword, strings) {
 
 console.log(findStringsInArrayByKeyword('PHP', ['Javascript', 'PHP']))
 console.log(findStringsInArrayByKeyword('Gấu', ['Javascript', 'PHP']))
-console.log(findStringsInArrayByKeyword('PHP', ['Học PHP','Javascript', 'PHP']))
+console.log(findStringsInArrayByKeyword('PHP', ['Học PHP', 'Javascript', 'PHP']))
 
 function findEqualValues(array1, array2) {
     let result = [];
@@ -171,8 +311,8 @@ function findEqualValues(array1, array2) {
     //     }
     // }
 
-    for(let i of array1) {
-        for(let j of array2) {
+    for (let i of array1) {
+        for (let j of array2) {
             if (i === j) {
                 result.push(i)
             }
