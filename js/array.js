@@ -354,3 +354,26 @@ function findEqualValues(array1, array2) {
 }
 
 console.log(findEqualValues([1, 2, 6, 8], [2, 9, 6]));
+
+function run(input) {
+    if (typeof(input) === 'string') {
+        return input.includes('F8')
+    } else if (Array.isArray(input)) {
+        for (let key of input) {
+            if (key !== 'F8') {
+                return false;
+            } else {
+                return true
+                break
+            }
+        }
+    }
+}
+
+function run(input) {
+    return input.includes('F8')
+}
+
+console.log(run(['F8', 'Học lập trình']))
+console.log(run('Học lập trình tại F8'))
+console.log(run(['F8 website', 'Học lập trình', 'F8 lap trinh']))

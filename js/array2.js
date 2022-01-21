@@ -318,8 +318,6 @@ console.log(getHTML.join(''))
 
 
 
-
-
 // -------------------------------------------indexOf/lastIndexOf and includes-------------------------------------------
 // The syntax:
 // arr.indexOf(item, from) – looks for item starting from index from, and returns the index where it was found, otherwise -1.
