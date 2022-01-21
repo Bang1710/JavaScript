@@ -161,18 +161,44 @@ console.log(getMaxSubSum([-2, -1, 1, 2]));
 // console.log(languges.toString)
 
 // ----------------------------------MỘT VÀI METHOD KHÁC ---------------------------
-// Cách xóa một phần tử của mảng -----DÙNG HÀM DELETE
-let exampleDelete = [
+// Cách xóa một phần tử của mảng -----DÙNG HÀM DELETE, phương thức này sẽ không làm rút ngắn độ dài của mảng
+let example = [
     'Apple',
     'Orange',
     'Lemon',
     'Waterlemon'
 ]
 
-console.log(delete exampleDelete[2]) //Khi delete thì sẽ trả về giá trị undefined
-console.log(exampleDelete.length)
-console.log(exampleDelete)
-console.log(exampleDelete[2] === undefined)
+console.log(delete example[2]) //Khi delete thì sẽ trả về giá trị undefined
+console.log(example.length)
+console.log(example)
+console.log(example[2] === undefined)
+
+// ----------TA CÓ THỂ DÙNG PHƯƠNG THỨC KHÁC ĐÓ CHÍNH LÀ SPLICE
+// Cú pháp: arr.splice(start[, deleteCount, elem1, ..., elemN])
+// Nó sửa đổi arr bắt đầu từ chỉ mục start: loại bỏ deleteCount 
+// các phần tử và sau đó chèn elem1, ..., elemN vào vị trí của chúng. 
+// Trả về mảng các phần tử bị loại bỏ.
+
+console.log(example.splice(1,1))
+console.log(example)
+
+console.log(example.splice(0, 2, "Let's", "dance")) //Xóa 2 phần tử từ vị trí số 0
+console.log(example.splice(1, 0, "Hello", "hi")) // Không xóa phần tử nào và thêm 2 phần tử từ vị trí thứ nhất
+// Sau khi splice thì nó sẽ trả về phần tử bị xóa đi
+console.log(example)
+
+// --------------------------------Slice Method ---------------------------------
+// Cú pháp là: arr.slice([start], [end])
+// method return a new array copy to it all items from index start to end of current array
+let sliceArray = example.slice(1,3)
+console.log(sliceArray) // return a new array
+
+// --------------------------------Concat Method----------------------------------
+// The syntax is: arr.concat(arr1, arr2, ...)
+let concatArray = example.concat(sliceArray, 2, [1, 'Welcome']);
+console.log(concatArray)
+
 
 // Cho trước hàm getRequestBodyFromValues và tham số formValues, các test case sẽ gọi hàm này và truyền đối số có định dạng tương tự như sau:
 
