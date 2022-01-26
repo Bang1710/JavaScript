@@ -14,13 +14,13 @@ html {
     color: rgb(243, 35, 46);
 }
 
-button {
+/* button {
     padding: 10px 20px;
     background-color: rgb(208, 255, 0);
     color: red;
     font-size: 2rem;
     border: none;
-}
+} */
 
 h1 {
     text-align: center;
