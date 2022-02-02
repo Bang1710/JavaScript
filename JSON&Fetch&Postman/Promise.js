@@ -21,8 +21,9 @@ console.log(2);
 /**Async */
 setTimeout(() => {
 	console.log(1);
-});
+}, 1000);
 console.log(2);
+
 
 // =====> 2  => 1
 
@@ -59,7 +60,7 @@ và chúng ta có thể sử dụng nó để khắc phục tình trạng “cal
 để giúp chúng ta viết code không bị xâu vào, dễ đọc dễ hiểu hơn.
 
 Để tạo ra được một Promise chúng ta sẽ sử dụng từ khóa new với Promise và 
-trong contructor của nó, chúng ta sẽ truyền vào một excutor function. 
+trong contructor của nó, chúng ta sẽ truyền vào một executor function. 
 Khi mà excutor được thực thi thì chúng ta sẽ nhận hai tham số dạng hàm, 
 1 là resolve(), 2 là reject(). resolve chúng ta sẽ gọi nó khi mà thao tác 
 xử lý logic của chúng ta thành công, reject chúng ta sẽ gọi khi thao tác 
@@ -78,8 +79,8 @@ let promise = new Promise(
 		// Logic
 		// Success: resolve()
 		// Fail: reject()
-        resolve('resolve!')
-        // reject('reject')
+        // resolve('resolve!')
+        reject('reject')
 	}
 );
 

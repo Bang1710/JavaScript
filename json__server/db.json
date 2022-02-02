@@ -1,0 +1,14 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "name": "JSON&Fetch",
+      "title": "Json la gi, Fetch la gi ..."
+    },
+    {
+      "name": "HTML & CSS basic",
+      "title": "Đây là khóa học cơ bản ",
+      "id": 2
+    }
+  ]
+}
